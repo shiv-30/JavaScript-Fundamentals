@@ -1,0 +1,1209 @@
+<script>
+  console.log("hello from javascript");
+  // comment
+  /* multiline comment */
+  /* data type:
+    undefined, null, boolean, string, symbol, number, object
+    undefined - value of the variable is not set
+  */
+
+  var myname = "bea"//it is used throughout whole program
+  myname = 8
+  let ourname = "feree"//it is used under a scope
+  const pi = 3.14//it is always constant
+
+  //storing values with assignment operator
+  var a;
+  var b = 2;
+  console.log(a)
+  a = 7;
+  b = a;
+  console.log(a)//to display value in console
+
+  //initalizing variables / assignm,ent operator
+  var a = 9;
+
+  //uninitialized variables
+  var a = 3;
+  var b = 2;
+  var c = "i am ";
+
+  a = a + 1;
+  b = b + 3;
+  c = c + "string";
+
+  //case sensitivity in variables
+  var study;
+  var sTudy;
+
+  //adding two numbers
+  var sum = 10 + 2;
+  console.log(sum)
+
+  //incrementing and decrementing
+  var my = 2;
+  my++;
+  my = 3;
+  my--;
+
+  //multipying two decimal numbers
+  var he = 2.0 * 3.2;
+  console.log(he)
+
+  //dividing two decuimal numbers
+  var q = 2.0 / 3.4;
+  console.log(q)
+
+  //finding a remainder
+  var remainder;
+  remainder = 11 % 3;
+
+  //compound assignment with augmented addition, multipication subtraction and division
+  a = a + 12;
+  a += a;
+  b += 3;
+  a = a - 4;
+  a -= 3;
+  b = b * 3;
+  b *= 3;
+  a = a / 12;
+  a /= 12;
+
+  //string
+  //escape sequence
+  var mystr = " i am \"double\" is "
+  console.log(mystr) //  i am "double" is 
+  mystr = 'hello "hi" koo';
+  /*****
+   \' single quote
+   \" double quote
+   \\ backslash
+   \n newline'
+   \r carriage return
+   \t <table>
+   \b backspace
+   \f form feed
+   *****/
+
+  mystr = "first\n \t second\n third";
+
+  //concatenating string with plus operator
+  mystr = "i am " + "hello";
+  mystr = mystr + "fine";
+  mystr += " hi "
+  console.log(mystr)
+
+  //appending variables to string
+  var str = "awesoem"
+  var mystr = 'hello';
+
+  mystr += str;
+
+  //finding the length of string
+  var myname = "ada"
+  var firstlength = 0;
+  firstlength = myname.length;
+  console.log(firstlength) // 3
+
+  //bracket notation to find first character in string
+  var firstname = "";
+  var name = "hello";
+  firstname = name[0];
+  console.log(firstname) // h
+
+  //string mutalbility
+  var name = 'hello world';
+  name[0] = 'j';//cant change like this
+  name = 'jello world';
+  console.log(name) // jello world
+
+  //bracket notation to find nth element in string
+  var namne = 'helo';
+  console.log(name[3]) // o
+
+  //bracket notation to find last element in string
+  var name = 'heklo';
+  console.log(name[name.length - 1]) // o
+
+  //bracket notation to find nth to last character in string
+  var name = 'hello wo;lf';
+  console.log(name[name.length - 3]) // ;
+
+  //word blanks
+  function wordblanks(noun, adjective, verb, adverb) {
+    var result = '';
+    result += ' the ' + adjective + noun + verb + ' to the store' + adverb;
+    return result
+  }
+
+  console.log(wordblanks(' dog ', ' big ', ' ran ', ' quickly '));
+
+  //store multiple values with array
+  var array = ['john', 23];
+  console.log(array);
+
+  //multidimensional array
+  var array = [['hello', 1], ['my', 3]];
+
+  //access array data with indexes
+  var array = [20, 30, 40];
+  var data = array[0];
+  console.log(data);
+
+  //modify array data with indexes
+  var array = [20, 30, 40];
+  array[1] = 90;
+  console.log(array[1]);
+
+  //access multidimensional arrays with indexes
+  var array = [[10, 20, 30], [30, 'jeoo', 'kooo'], [[10, 20, 30]]];
+  console.log(array[0][2]);
+  console.log(array[array.length - 1][0][1]);
+
+  //manipulate array with push
+  var array = [['hello', 'world'], [10, 20]];
+  array.push(['hi', 30]);
+  console.log(array[array.length - 1]); //  ["hi", 30]
+
+  //remove item from array
+  var array = ['1', 2, '3'];
+  var removearray = array.pop();// <arrray>.pop()  removes last element from array and return the element which is removed
+  console.log(removearray); // 3
+  console.log(array) // ['1', 2]
+  var removearr = array.shift();//<array>.shift() removes the first element from array and return the element which is removed
+  console.log(array);
+  console.log(removearr);
+
+  //manipulate arrays from unshift()
+  var array = [1, 2, 3];
+  array.shift();
+  array.unshift('Happy');//<array>.unshift(<element to be pushed>) insert the element in the begining of the array
+  console.log("now the array after unshift is ", array);
+  array.unshift(['helo', 21]);
+  console.log(array);
+
+  //write reusable codes with functions
+  function myfuct() {
+    console.log('hello', 'world');
+  }
+
+  myfuct();
+
+  //passing values of arguments
+  function fuct(a, b) {
+    console.log(a - b);
+  }
+  fuct(10, 7);
+
+  //global scope and functions
+  var myglobal = 31;
+  function fun1() {
+    oopsglobal = 6;// oopsglobal is global variable
+    var local = 'hi i am local'// local is limited to the scope of fun1 funtion
+  }
+  // typeof <variable> - return the typeof that variable
+  var array = [1, 2, 3];
+  console.log(typeof array) // object
+  function fun2() {
+    var output = '';
+    if (typeof myglobal != 'undefined') {
+      myglobal += 2;
+      output += ' myglobal ' + myglobal + '\n';
+    }
+
+    if (typeof oopsglobal != 'undefined') {
+      oopsglobal += 4;
+      output += ' oopsglobal ' + oopsglobal + '\n';
+    }
+
+    if (typeof local != 'undefined') {
+      output += local + ' fun2 ' + '\n';
+    }
+
+    console.log(output);
+
+  }
+  fun1();
+  fun2();
+
+  //local scope and functions
+  function mylocalscope() {
+    var myvar = 'i am inside mylocalscope fuction '
+    console.log(myvar);
+  }
+
+  mylocalscope();
+  //console.log(myvar);if you try to access myvar outside the scope of the function mylocalscope() it gives error because myvar is a local variable
+
+  //glbal vs local scope in functions
+  var out = 'hello global'
+
+  function local() {
+    var out = 'inside local'
+    return out;
+  }
+
+  console.log(local()) // inside local
+  console.log(out); // hello global
+
+  //return value from a function with return
+  function minus(num) {
+    return num - 2;
+  }
+  console.log(minus(2));
+
+  //understanding undefined value returned from a function
+  var sum = 0;
+  function addthre() {
+    sum = sum + 3;
+  }
+
+  function addfive() {
+    sum = sum + 5;
+  }
+  console.log(addfive()) // undefined 
+  // undefined is printed in output because function addfive() does not return anything
+  
+  //assignment with a return values
+  var changed = 0;
+
+  function change(num) {
+    return (num + 3) / 3;
+  }
+
+  changed = changed + change(3);
+  process = change(10);
+  console.log(process)
+
+  //stand in line
+  function nextinline(arr, item) {
+    arr.push(item);
+    item = arr.shift();
+    return item;
+  }
+
+  var testarr = [1, 2, 3, 4];
+
+  console.log("before: " + JSON.stringify(testarr));//JSON.stringfy(<array>) - used to convert array into a string
+  console.log(nextinline(testarr, 6));
+  console.log("after :" + JSON.stringify(testarr));
+
+  //boolean values - true or false
+  function welcometoboolean() {
+
+    return false;
+  }
+
+  //use conditional logic with if statements
+  function ourtrueorfalse(isittrue) {
+    if (isittrue) {
+      return "yes it is true";
+    }
+    return "no it is false";
+  }
+
+  function trueorfalse(wasthattrue) {
+    if (wasthattrue) {
+      return "was that true";
+    }
+    return "wast that not true";
+  }
+
+  console.log(ourtrueorfalse(true));
+  console.log(trueorfalse(false));
+
+  //comparison with equality operator
+  function equalto(val) {
+    if (val == 3)
+      return 'true';
+    else {
+      return 'false';
+    }
+  }
+
+  console.log(equalto(4));
+
+  //comarison with strict equality operator
+  function strictequal(val) {
+    if ('3' === val) { // === comparison does not do typecast while comparison
+      return 'true';
+    }
+    return 'false';
+  }
+
+  function equalto(val) { // == comparison performs typecast while comparison
+    if ('3' == val) {
+      return 'true';
+
+    }
+    return 'false';
+  }
+
+  console.log(strictequal(3));// this return false because typecast is not performed
+  console.log(equalto(3));// this return true because typecast is performed
+
+  //comparison with inequality operator
+  function testnotequal(val) {
+    if (val != '3')// != does typecast operation while comaparison
+      return false;
+    return true;
+  }
+
+  function strictnotequal(val) {
+    if (val !== '3')// !== doest not perform typecast operation while comparison
+      return false;
+    return true;
+  }
+
+  console.log(testnotequal(3));// return true because it performs typecast operation
+  console.log(strictnotequal(3));// return false because it does not perform typecast operation
+
+  //logical and operator - &&
+  //logical or operator - ||
+
+  //like c++ we can use else statement and else if statement but it should be in correct order like in c++
+
+  //switch statements
+  function caseswitch(val) {
+    switch (val) {
+      case 1: console.log("hello");
+        break;
+      case 2: console.log("hi");
+        break;
+      default: console.log("wrong input");
+    }
+  }
+
+  caseswitch(2);
+
+  //return boolean value from functions
+  function isless(a, b) {
+    return (a < b);
+  }
+
+  console.log(isless(3, 7));
+
+  //returning early pattern from functions
+  function abtest(a, b) {
+    if (a < 0 || b < 0) {
+      return undefined;
+    }
+
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+  }
+
+  console.log(abtest(2, 2));
+
+  //Build javascript objects
+  var dog = { // dog is an object,  everything  before colon is a property
+    'name': 'comper',
+    'legs': 4,
+    'friends': ['everything']
+  };
+
+  //accessing object properties with dot notation
+  var testobj = {
+    'an entree': 'hamburger',
+    'my side': 'vergies',
+    'the drink': 'water'
+  };
+
+  var entreevalue = testobj['an entree'];
+  var drinkvalue = testobj['the drink'];
+
+  //accessing object properties with variables
+  var testobj = {
+    12: 'namath',
+    13: 'montana',
+    14: 'unitas',
+  };
+
+  var playernumber = 16;
+  var player = testobj[playernumber];
+
+  //updating object properties
+  var ourdog = {
+    'name': 'camper',
+    'legs': 4,
+    'tails': 1,
+    'friends': ['everything!']
+  };
+
+  ourdog.name = 'happy camper';
+  console.log(ourdog);
+
+  //add new properties to an   object
+  var ourdog = {
+    'name': 'hello',
+    'legs': 4,
+  };
+
+  ourdog['bark'] = 'woof!';
+  console.log(ourdog);
+
+  //delete properties from object
+  var ourdog = {
+    'name': 'hello',
+    'legs': 4,
+  };
+
+  delete ourdog.bark
+  // delete ourdog['bark'] - this way we can also delete and if we try to access the property which we deleted we get 'undefined'
+  console.log(ourdog)
+
+  //using objects for lookups
+  function lokkup(val) {
+    var lookups = {
+      'name': 'hello',
+      'class': '3',
+      'roll': '34'
+    };
+
+    return lookups[val];
+  }
+
+  console.log(lokkup('name'));
+
+  //testing objects for properties
+  var prop = {
+    'name': 4,
+    'class': 3,
+    'roll': 'hello'
+  };
+
+  function checkprop(pr) {
+    if (prop.hasOwnProperty(pr)) {
+      return prop[pr];
+    }
+    return 'change me';
+  }
+  // <dictionary varible>.hasOwnProperty(<property>) - returns True if property is in the variable else returns false
+  console.log(checkprop('name'));
+
+  //manipulatng complex objects
+  var mymusic = {
+    'artist': 'hello',
+    'hel': 4,
+    'arr': [3, 4, 5]
+  };
+  var hello = [
+    {
+      'artist': 'andra',
+      'js': 'jes',
+      'arr': [4, 6, 8]
+    }
+  ];
+
+  // manipulating complex objects
+  var music = [
+  {
+    "artist": "Billy",
+    "title": "piano",
+    "formats": [
+      "OC",
+      "OD",
+      "CD"
+      ],
+  },
+  {
+    "artist": "Hob",
+    "title": "smokeweed",
+    "formats": [
+      "CD"
+      ],
+  }
+  ]
+  // this is similar to JSON format
+  console.log(music)
+
+  // Accessing Nested Objects
+  var mystorage = {
+    "car": {
+      "inside": {
+        "glove box": "maps",
+        "passenger seat": "crumbs"
+      },
+      "outside" : {
+        "trunk": "jack"
+      }
+    }
+  };
+  var glove = mystorage.car.inside["glove box"];
+  console.log(glove) // maps
+
+  // Accessing Nested Arrays
+  var myplants = [
+  {
+    type: "flowers",
+    list: [
+    "rose",
+    "tulip"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+    "fir",
+    "pine"
+    ]
+  }
+  ];
+
+  var secontree = myplants[1].list[1];
+  console.log(secontree) // pine
+
+  // Record Collection
+  var collection = {
+    "245": {
+      "album": "hello",
+      "tracks": [
+      "ley",
+      "may"
+      ]
+    },
+    "234": {
+        "album": "hell",
+        "tracks": [
+        "1999",
+        "2000"
+        ]
+      },
+    "345": {
+      "album":"Party"
+    },
+    "456": {
+      "album": "June",
+      "tracks":[]
+    }
+    
+  };
+
+  // keep copy of collection for tests
+  var collectioncopy = JSON.parse(JSON.stringify(collection)) // to make copy of objects
+
+  function updateRecords(id, prop, value) {
+    if (value === "") {
+      delete collection[id][prop];
+    }
+    else if (prop === "tracks") {
+      collection[id][prop] = collection[id][prop] || []; // if tracks doest not contains anything then an empty list is assigned else the value of tracks is assigned
+      collection[id][prop].push(value);
+    }
+    else {
+      collection[id][prop] = value;
+    }
+    return collection;
+  }
+
+  console.log(updateRecords("345", "new edition", "Now"));
+  console.log(updateRecords("245", "album", "Cry"));
+  console.log(updateRecords("345", "tracks", "pendrive"));
+  console.log(updateRecords("456", "tracks", "CD"));
+  console.log(updateRecords("345", "tracks", "Disk"));
+
+  // while loop
+  var array = []
+  var i = 0
+  while(i < 6) {
+    array.push(i);
+    i++;
+  }
+  console.log(array)
+
+  // for loop
+  var array = [];
+  for(var i = 0; i < 5; ++i) {
+    array.push(i);
+  }
+  console.log(array);
+
+  // iterate old Numbers with a for loop
+  var array = []
+  for(var i = 0; i < 5; i += 2) {
+    array.push(i);
+  }
+  console.log(array);
+
+  // count Backwards with a for loop
+  var array = []
+  for(var i = 10; i > 0; i -=2) {
+    array.push(i);
+  }
+  console.log(array);
+
+  // Iterate through an Array with a for loop
+  var array = [1, 2, 3, 4];
+  for(var i = 0; i < array.length; ++i) {
+    console.log(array[i]);
+  }
+
+  // Nesting For loops
+  function show(array) {
+    for(var i = 0; i < array.length; ++i) {
+      for(var j = 0; j < array[i].length; ++j) {
+        console.log(array[i][j]);
+      }
+    }
+  }
+  
+  var array = [[10,20], [29,98], [34, 8]];
+  show(array);
+
+  // iterate with do while loop
+  var array = [];
+  i = 10;
+  do {
+    array.push(i);
+  } while(i < 10);
+
+  console.log(array);
+
+  // code challenge
+  var contacts = [
+  {
+    "first":"Ram",
+    "contacts": "6727282",
+    "likes": ["pixx", "home"]
+  },
+  {
+    "first": "Shyam",
+    "contacts": "537383",
+    "likes": ["python"]
+  },
+  {
+    "first": "Rohan",
+    "contacts": "unkown",
+    "likes": ["code","Upsc"]
+  }
+  ];
+
+  function lookupprofile(name, prop) {
+    for(var i = 0; i < contacts.length; ++i) {
+      if (contacts[i].first === name) {
+        return contacts[i][prop] || "No such Property";
+      }
+    
+    }
+    return "No such name";
+  }
+
+  console.log(lookupprofile("Shyam", "contacts"));
+  console.log(lookupprofile("Rangella", "contacts"));
+
+  // Generate Random Fractions
+
+  function randomFraction() {
+    return Math.random(); // returns random fraction between 0 and 1
+  }
+
+  console.log(randomFraction());
+
+  // Generate Random Whole Number
+  var randomnumberbetween0and19 = Math.floor(Math.random() * 20);
+  function randomNumber() {
+    return Math.floor(Math.random() * 10); // generate no between 0 and 9
+  }
+  console.log(randomNumber());
+
+  // generate whole number within a range
+
+  function ourRandomRange(ourmin, ourmax) {
+    
+    return Math.floor(Math.random() * (ourmax - ourmin + 1)) + ourmin;
+  
+  }
+
+  console.log(ourRandomRange(1,9));
+
+  // Use the parseInt Function
+
+  function converttoInteger(str) {
+
+    return parseInt(str); // parseInt(<string>) - convert string to integer
+  }
+
+  console.log(converttoInteger("89"));
+
+  // use the parseInt Function with a Radix (base)
+  
+  function converttobInteger(str) {
+
+    return parseInt(str, 2); // parseInt(<string>, <int>) - convert the string to a number of a given base . By default the base is 10.
+
+  }
+
+  console.log(converttobInteger("11")); // 3
+
+  // Use the Ternary operator
+
+  function ternary(a, b) {
+    return (a > b) ? 1 : 0;
+  }
+  
+  console.log(ternary(1,2));
+
+  // Multiple Ternary operator
+
+  function multipleternary(a, b, c) {
+    return (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+  }
+  console.log(multipleternary(1, 2, 3));
+
+  // Difference Betweeen var and let keyword
+  
+  // var cat = 9;
+  // var cat = 9; // doest not give error
+
+  let cat = 9;
+  cat = 10;
+  // let cat = 8; this give duplicate error
+  /*
+  better to use let or const keyword because we dont want to declare same variable multiple times in same scope
+  */
+
+  function cattalk() {
+    "use strict";
+    var cat = "hello";
+    var cat = "hell";
+    console.log(cat);
+  }
+
+  cattalk();
+  
+  // Difference between scope of let and var
+  // when you declare var outside function is globally accessible and when you declare inside function it is also globally accessible
+  // when you declare a varible with let it is avalible within the scope
+  function varscope() {
+    var i = "function";
+    if(true) {
+      var i = "block";
+      console.log(i);
+    }
+    console.log(i);
+  }
+  varscope();
+
+  function letscope() {
+    let i = "function";
+    if (true) {
+     let i = "Block";
+      console.log(i);
+    }
+    console.log(i);
+  }
+
+  letscope();
+
+  function varscope2() {
+    if(true) {
+      var i = "block";
+      console.log(i);
+    }
+    console.log(i);
+  }
+  varscope2();
+
+  // Declare a Read-Only Varible with the const Keyword
+  const KEY = "hello"; // whenever you declare a varible const make sure the varible must be in capital so that we can remember that it is declared by const keyword
+  // key = "No"; - you cannot reassign a constant varible
+  console.log(KEY);
+
+  // Mutate an Array Declared with const
+  const s = [5, 6, 2];
+  function edit() {
+    "use strict";
+    // s = [2, 5, 7];
+    s[0] = 2;
+    s[1] = 5;
+    s[2] = 7;
+  }
+  edit();
+  console.log(s);
+
+  // Prevent Object Mutation
+  function freezeobj() {
+    "use strict";
+    // with the usage of const, MATH_CONSTANTS is still mutable object.
+    const MATH_CONSTANTS = {
+      PI: 3.14,
+
+    };
+    // TO MAKE MATH_CONSTANTS object immutable we use Object.freeze(<object>) function
+    // object.freeze(<object>) - make object immutable, its values cannot be changed
+    Object.freeze(MATH_CONSTANTS); 
+    try {
+      MATH_CONSTANTS.PI = 99;
+    } catch( ex ) {
+      console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+  }
+  const PI = freezeobj();
+  console.log(PI);
+
+  // Use Arrow Functions to Write Concise Anonymous Functions
+
+  const magic = () => {
+    return new Date();
+  }
+  console.log(magic); 
+  const mag = () => new Date();
+  console.log(mag);
+
+  // Array iterations
+
+  // forEach
+  [1,2,3].forEach(function (item, index) {
+    console.log(item, index);
+  });
+
+  // map
+  var three = [1,2,3]
+  var doubled = three.map(function (item) {
+    return item * 2;
+  });
+  console.log(doubled)
+
+  // filter
+  var ints = [1,2,3];
+  var evens = ints.filter(function(item){
+    return item % 2 != 0;
+  });
+  console.log(evens);
+
+  // reduce 
+  var sum = [1,2,3].reduce(function (result, item) {
+    return result + item;
+  }, 0); // 0 is assigned to result if no value is passed then first element of array is assigned
+  console.log(sum);
+
+  // forEach 
+  // The forEach() method calls a function once for each element in an array, in order.
+  // Note: the function is not executed for array elements without values.
+
+  var num = [1,2,3]
+  num.forEach(function(item) {
+    item = item * 3;
+    console.log(item);
+  })
+  console.log(num);
+
+  // some - return true is condition is satisfied by any element of array else returns false
+  var hasnegno = [1,2,3,-1].some(function(item){
+    return item < 0;
+  });
+  console.log(hasnegno);
+
+  // every - return true if condition is satisfied by every element else false
+  var pro = [1,2,-3].every(function (item) {
+    return item > 0;
+  });
+  console.log(pro); 
+
+  // find return item if found else return 'undefined'
+  var objects = [{'id':'a'}, {'id':'b'}, {'id':'c'}];
+  var found = objects.find(function(item){
+    return item.id === 'd';
+  })
+  console.log(found);
+
+  // find index return index if found else return -1
+  var objects = [{'id':'a'}, {'id':'b'}, {'id':'c'}];
+  var found = objects.findIndex(function(item){
+    return item.id === 'd';
+  })
+  console.log(found);
+
+  // write Arrow Functions with Parameters
+  var myConcat = function(arr1, arr2) {
+    return arr1.concat(arr2);
+  }
+
+  console.log(myConcat([1,2], [3, 4, 5]));
+
+  var myconcat = (arr1, arr2) => {
+    return arr1.concat(arr2);
+  }
+  console.log(myconcat([1,2,3], [4,5]));
+
+  // write Higher Order Arrow Functions
+  var realnoarray = [4, 5, -1, 2, 6, 4.5];
+
+  var squarelist = (arr) => {
+    var squaredint = arr.filter(function (item) {
+      return item > 0 && Number.isInteger(item);
+    });
+    return squaredint.map(function (item) {
+      return item * item;
+    })
+  }
+
+  console.log(squarelist(realnoarray));
+
+  var realnoarray = [4, 5, -1, 2, 6, 4.5];
+  var squarelist = (arr) => {
+    var squaredint = arr.filter( num => Number.isInteger(num) && num > 0).map(x => x * x)
+    return squaredint;
+  };
+  console.log(squarelist(realnoarray));
+
+  // write Higher Order functions
+  var increment = (function(){
+    return function increment(number, value = 1) {
+      return number + value;
+    };
+  }) ();
+  console.log(increment(15, 2));
+  console.log(increment(3));
+
+  // Use Rest Operator with function parameters -
+  // ...- called rest operator through which any no of paramaters can be passed to a function 
+  // ...args - any no of parameters passed it will convert it into array called args
+  var sum = (function () {
+    return function sum(...args) {
+      return args.reduce((a,b)=> a + b, 0);
+    };
+  }) ();
+  console.log(sum(1,2,3,4));
+
+  // Use the Spread operator to evaluate arrays In-place
+  // here arr2 = arr1 does not copy arr1 to arr2
+  var arr1 = ['jan', 'feb', 'march']
+  var arr2;
+  (function () {
+    arr2 = arr1;
+    arr1[0] = "potatoes";
+  }) ();
+  console.log(arr2);
+
+  var arr1 = ['jan', 'feb', 'march']
+  var arr2;
+  (function () {
+    arr2 = [...arr1]; // here it spreads out the contents of arr1 into new array
+    arr1[0] = "potatoes";
+  }) ();
+  console.log(arr2);
+
+  // Use Destructuring Assignment to Assign Variables from Objets
+  var vowel = {x:3, y:3, z: 64}
+  var x = vowel.x;
+  var y = vowel.y;
+  var z = vowel.z;
+
+  console.log(x, y, z, vowel)
+
+  var {x : a, y : b, z : c} = vowel // a = 3, b = 3, c = 64
+
+  var avg_temp = {
+    today:45,
+    tomorrow: 65, 
+  };
+
+  function gettom(avg) {
+    "use strict";
+    var { tomorrow : tom } = avg;
+    return tom;
+  }
+
+  console.log(gettom(avg_temp));
+
+  // Destructing Assignment with Nested Objects
+
+  var local_for = {
+    today: { min: 34, max:45},
+    tomorrow: {min:42, max:50},
+  };
+
+  function getmaxtom(localfor) {
+    "use strict";
+    var { tomorrow : { max : maxoftom }} = localfor;
+    return maxoftom;
+  };
+
+  console.log(getmaxtom(local_for));
+
+  // Using Destructing Assignments to Assign Variables from Arrays
+  var [x, y, , z] = [1,2,3,4,5];
+  console.log(x, y, z);
+
+  var a = 3, b = 8;
+  [a, b] = [b, a];
+  console.log(a, b);
+
+  // Use Destructuring Assignment with the Rest operator
+  var source = [1,2,3,4,5,6,7,8];
+
+  function removfirstwo(list) {
+    var [, , ...arr1] = list; // skiping first two elements of source array and assigning rest elements to an array arr1
+    return arr1;
+  }
+
+  var arr = removfirstwo(source);
+  console.log(arr);
+  console.log(source);
+
+  // Use Destructuring Assignment to pass an object as a function's parameter
+  var stats = {
+    max:3,
+    min:2,
+    dv:3.4,
+  }
+
+  var half = (function () {
+    return function half({max, min}) {
+      return (max + min) / 2;
+    };
+  }) ();
+
+  console.log(stats);
+  console.log(half(stats));
+
+  // Create String using Template Literals
+  var person = {
+    name : "Zodiac Hasbro",
+    age : 56,
+  };
+
+  var greeting = `Hello , ${person.name} ! is ${person.age} old.`;
+
+  console.log(greeting);
+
+  var result = {
+    sucess: ["max_length", "no_and"],
+    failure: ["no-var", "var_on-top"],
+    skipped: ["id-black;ist", "no-dup"]
+  };
+
+  function makelist(arr) {
+    var resultdisplay = [];
+    for(let i = 0; i < arr.length; ++i) {
+      resultdisplay.push(`<li class="text-warning"> ${arr[i]} </li>`)
+      
+    }
+    return resultdisplay;
+  }
+
+  console.log(makelist(result.failure));
+
+  // Write Concise Object Literal Declaration using simple fields
+  var createperson = (name, age, gender) => {
+    return {
+      name: name,
+      age: age,
+      gender: gender,
+    };
+  };
+
+  var createsimpleperson = (name, age, gender) => ({name, age, gender});
+
+  console.log(createperson("HELp",45, "M"));
+  console.log(createsimpleperson("HELp",45, "M"));
+
+  // Write Concise Declarative Functions
+  var bicycle = {
+    tierno:2,
+
+    setnewtiers(no) {
+      "use strict";
+      this.tierno = no;
+    },
+    gear: 2,
+    setgear: function (newgear) {
+      "use strict";
+      this.gear = newgear;
+       
+    }
+  };
+
+  bicycle.setgear(3)
+  console.log(bicycle.gear);
+
+  bicycle.setnewtiers(4);
+  console.log(bicycle.tierno);
+
+  // class Syntax to define a constructor function
+  class SpaceSuttle {
+    constructor(targetplant) {
+      this.targetplant = targetplant;
+    }
+  }
+
+  var zeus = new SpaceSuttle('jupytier');
+  console.log(zeus.targetplant);
+
+  function makeclass() {
+    class vegetable {
+      constructor (name) {
+        this.name = name;
+      }
+    }
+    return vegetable;
+  }
+
+  var vegetable = makeclass();
+  var carrot = new vegetable("carrot");
+  console.log(carrot.name);
+
+  // Use getters and setters to control access to an object - they are properties of class, so we directly acces with '.' operator
+  class Book {
+    constructor (author) {
+      this._author = author;
+    }
+
+    // getter
+
+    
+    get writer() {
+      return this._author;
+    }
+
+    set writer(updatewriter) {
+      this._author = updatewriter
+    }
+    
+  }
+  var book = new Book("Alys");
+  console.log(book.writer);
+  book.writer = "Alexa";
+  console.log(book.writer);
+
+
+  function makeclass() {
+    class Thermostat {
+      constructor(temp) {
+        this._temp = 5/9 * (temp - 32);// _<varibale> means its a private member
+      };
+      get temperature() {
+        return this._temp;
+      };
+      set temperature(updatedtemp) {
+        this._temp = 5/9 * (updatedtemp - 32);
+      }
+    }
+    return Thermostat;
+  }
+
+  var Thermostat = makeclass();
+  var thermos = new Thermostat(32);
+  console.log(thermos.temperature);
+  thermos.temperature = 212;
+  console.log(thermos.temperature);
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+</script>
